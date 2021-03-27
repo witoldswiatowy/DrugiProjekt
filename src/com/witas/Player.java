@@ -23,14 +23,14 @@ public class Player {
         this.lives = lives;
     }
 
-    void hit (int roll){
-        int demage = this.power + roll;
-        System.out.println("Ilość obrażeń: " + demage);
-    }
+//    void hit (int roll){
+//        int demage = this.power + roll;
+//        System.out.println("Ilość obrażeń: " + demage);
+//    }
 
     void attack (int roll, Player target){
-       target.hit(roll);
-       target.hp -= this.demage;
+        demage = this.power + roll;
+        target.hp -= target.def - this.demage;
         System.out.println(target.name + " został zaatakowany za " + this.demage + " i ma " + target.hp + " życia.");
 
     }

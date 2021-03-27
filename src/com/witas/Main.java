@@ -17,15 +17,15 @@ public class Main {
 
         Player hero1 = new Player(Species.CZLOWIEK,"Felix",2,15,5,4,true);
         Player hero2 = new Player(Species.KRASNOLUD, "Gotrek",5,25,7,5,true);
-        Player enemy = new Player(Species.OGR,"Michał",6,30,7,2,true);
+        Player enemy = new Player(Species.OGR,"Ogr",6,30,7,2,true);
 
 
-        System.out.println(hero1.name);
 
-       enemy.hit(roll);
+
        enemy.attack(roll,hero1);
+       hero2.attack(roll,enemy);
 
-        System.out.println(enemy.hp);
+
 
 
 //        int i1 = 0;
