@@ -20,11 +20,15 @@ public class Main {
         Player enemy = new Player(Species.OGR,"Ogr",6,30,7,2,true);
 
 
+        while ((hero1.lives || hero2.lives) && enemy.lives) {
 
-
-       enemy.attack(roll,hero1);
-       hero2.attack(roll,enemy);
-
+            if (hero1.lives)
+                hero1.attack(roll, enemy);
+            if (hero2.lives)
+                hero2.attack(roll, enemy);
+            if (enemy.lives)
+                enemy.attack(roll, hero1);
+        }
 
 
 
