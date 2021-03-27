@@ -23,6 +23,7 @@ public class Main {
         System.out.println(hero1.name);
 
        enemy.hit(roll);
+       enemy.attack(roll,hero1);
 
         System.out.println(enemy.hp);
 

@@ -25,11 +25,14 @@ public class Player {
 
     void hit (int roll){
         int demage = this.power + roll;
-        System.out.println(demage);
+        System.out.println("Ilość obrażeń: " + demage);
     }
 
-    void attack (int demage, Player target){
-        target.hit(demage);
+    void attack (int roll, Player target){
+       target.hit(roll);
+       target.hp -= this.demage;
+        System.out.println(target.name + " został zaatakowany za " + this.demage + " i ma " + target.hp + " życia.");
+
     }
 
 }
