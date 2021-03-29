@@ -29,11 +29,16 @@ public class Player {
 //    }
 
     void attack (int roll, Player target){
-        demage = this.power + roll;
-        target.hp += target.def - this.demage;
-        System.out.println(target.name + " został zaatakowany za " + this.demage + " przez " + this.name + " i ma " + target.hp + " życia.");
-        if (target.hp <= 0)
+        if (target.lives) {
+            demage = this.power + roll;
+            target.hp += target.def - this.demage;
+            System.out.println(target.name + " został zaatakowany za " + this.demage + " przez " + this.name + " i ma " + target.hp + " życia.");
+        }
+        if (target.hp <= 0){
             target.lives = false;
+            System.out.println(this.name + " zadał ostatni cios zabijając " + target.name + "a!");
+        }
+
 
     }
 
