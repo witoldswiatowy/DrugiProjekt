@@ -19,6 +19,7 @@ public class Main {
 
 //        while ((hero1.lives || hero2.lives) && enemy.lives) {
 //
+
 //            if (hero1.lives) {
 //                int roll = rnd.nextInt(10) + 1;
 //                hero1.attack(roll, enemy);

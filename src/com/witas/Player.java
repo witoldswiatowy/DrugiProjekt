@@ -37,7 +37,6 @@ public class Player {
         System.out.println("Ile ma ini?");
         this.ini = scanner.nextInt();
 
-
         System.out.println(this.name);
         System.out.println(this.def);
         System.out.println(this.hp);
