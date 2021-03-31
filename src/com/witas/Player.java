@@ -21,6 +21,11 @@ public class Player {
         this.name = name;
         this.def = def;
         this.hp = hp;
+
+
+
+
+
         this.power = power;
         this.ini = ini;
         this.lives = lives;
