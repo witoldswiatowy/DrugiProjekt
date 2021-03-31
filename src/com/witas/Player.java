@@ -47,9 +47,8 @@ public class Player {
 //        this.name = scanner.next();
         System.out.println("Ile ma defa? (Wpisz L, by wylosować)");
         String def = scanner.next();
-        if (def == "L"){
-            int defRoll = rnd.nextInt(10) + 1;
-            this.def = defRoll;
+        if (def.equals("L")){
+            this.def = rnd.nextInt(10) + 1;
         System.out.println("Twoja postać ma: " + this.def + " defa.");
         }
         System.out.println("Ile ma hp?");
