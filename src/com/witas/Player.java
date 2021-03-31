@@ -14,6 +14,7 @@ public class Player {
     boolean lives;
     int demage;
     Scanner scanner = new Scanner(System.in);
+    Random rnd = new Random();
 
     public Player(Species species, String name, int def, int hp, int power, int ini, boolean lives) {
         this.species = species;
@@ -26,10 +27,31 @@ public class Player {
     }
 
     void createPlayer (){
-        System.out.println("Jak nazywa się twoja postać?");
-        this.name = scanner.next();
-        System.out.println("Ile ma defa?");
-        this.def = scanner.nextInt();
+//        System.out.println("Jakiej rasy jest twoja postać? \n Człowiek, Krasnolud czy Ogr?");
+//        String choiceSpecies = scanner.next();
+//        switch (choiceSpecies){
+//            case "Człowiek":
+//                this.species = Species.CZLOWIEK;
+//                break;
+//            case "Krasnolud":
+//                this.species = Species.KRASNOLUD;
+//                break;
+//            case "Ogr":
+//                this.species = Species.OGR;
+//                break;
+//            default:
+//                System.out.println("Chyba umiesz poprawnie napisać nazwę swojej rasy? Spróbuj jeszcze raz.");
+//        }
+//        System.out.println("Ok, twoja postać to: " + this.species);
+//        System.out.println("Jak nazywa się twoja postać?");
+//        this.name = scanner.next();
+        System.out.println("Ile ma defa? (Wpisz L, by wylosować)");
+        String def = scanner.next();
+        if (def == "L"){
+            int defRoll = rnd.nextInt(10) + 1;
+            this.def = defRoll;
+        System.out.println("Twoja postać ma: " + this.def + " defa.");
+        }
         System.out.println("Ile ma hp?");
         this.hp = scanner.nextInt();
         System.out.println("Ile ma power?");
