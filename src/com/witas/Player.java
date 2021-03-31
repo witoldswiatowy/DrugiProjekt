@@ -45,6 +45,7 @@ public class Player {
 //        System.out.println("Ok, twoja postać to: " + this.species);
 //        System.out.println("Jak nazywa się twoja postać?");
 //        this.name = scanner.next();
+
         System.out.println("Ile ma defa? (Wpisz L, by wylosować)");
         String def = scanner.next();
         if (def.equals("L")){
